@@ -30,8 +30,8 @@ jobs:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
       
     - run: |
-        az appservice plan create -g booksapilbrg -n booksapilbplan
-        az webapp create -g booksapilbrg -p booksapilbplan -n booksapilb --runtime "PYTHON|3.6"
+        az appservice plan create --is-linux -g booksapilbrg -n booksapilbplan2
+        az webapp create -g booksapilbrg -p booksapilbplan2 -n booksapilb --runtime "PYTHON|3.7"
         
     - name: Azure WebApp
       uses: Azure/webapps-deploy@v2
