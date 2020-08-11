@@ -30,7 +30,7 @@ jobs:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
       
     - run: |
-        az appservice plan create -g your_resource_group -n pywebplan
+        az appservice plan create -g booksapilbrg -n booksapilbplan
         az webapp create -g booksapilbrg -p booksapilbplan -n booksapilb --runtime "PYTHON|3.7"
         
     - name: Azure WebApp
