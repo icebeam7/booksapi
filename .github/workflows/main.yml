@@ -31,7 +31,7 @@ jobs:
       
     - run: |
         az appservice plan create -g booksapilbrg -n booksapilbplan
-        az webapp create -g booksapilbrg -p booksapilbplan -n booksapilb --runtime "PYTHON|3.7"
+        az webapp create -g booksapilbrg -p booksapilbplan -n booksapilb --runtime "PYTHON|3.6"
         
     - name: Azure WebApp
       uses: Azure/webapps-deploy@v2
